@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search city..."
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-btn">Search</button>
+            <button id="locationBtn" class="location-btn">Location</button>
+        </div>
+
+        <div class="loading" id="loading">Loading...</div>
+        <div class="error" id="error"></div>
+
+        <div class="weather-content" id="weatherContent" style="display: none;">
+            <div class="weather-main">
+                <!-- Left Side: Current Weather -->
+                <div class="weather-left">
+                    <div class="weather-header">
+                        <h2 id="cityName">-</h2>
+                    </div>
+
+                    <div class="weather-display">
+                        <div class="temp-section">
+                            <div class="temperature">
+                                <span id="temperature">-</span>°C
+                            </div>
+                            <p id="weatherDescription">-</p>
+                        </div>
+                    </div>
+
+                    <p id="feelsLike" class="feels-like">Feels like -°C</p>
+                </div>
+
+                <!-- Right Side: Details & Forecast -->
+                <div class="weather-right">
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Wind</span>
+                            <span id="windSpeed" class="detail-value">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Pressure</span>
+                            <span id="pressure" class="detail-value">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Visibility</span>
+                            <span id="visibility" class="detail-value">-</span>
+                        </div>
+                    </div>
+
+                    <div class="forecast-container">
+                        <h4>7-Day Forecast</h4>
+                        <div class="forecast" id="forecast"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
